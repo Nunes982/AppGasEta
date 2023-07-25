@@ -17,25 +17,40 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editPrimeiroNome"
+        app:layout_constraintBottom_toTopOf="@+id/editGa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
-        android:id="@+id/editSobrenome"
+        android:id="@+id/editGa"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="@string/txt_hint_edit_sobrenome"
-        android:inputType="text|textPersonName|textAutoComplete"
+        android:hint="@string/txt_hint_edit_preco_gasolina"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/editEt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+
+    <EditText
+        android:id="@+id/editEt"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/txt_hint_edit_preco_etanol"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/editNomeDoCurso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPrimeiroNome" />
+        app:layout_constraintTop_toBottomOf="@+id/editGa" />
 
     <EditText
         android:id="@+id/editNomeDoCurso"
@@ -44,12 +59,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="@string/txt_hint_edit_nome_do_curso"
+        android:hint="@string/campo_nao_utilizado"
         android:inputType="text|textAutoComplete"
         app:layout_constraintBottom_toTopOf="@+id/editTelefoneContato"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editSobrenome" />
+        app:layout_constraintTop_toBottomOf="@+id/editEt" />
 
     <EditText
         android:id="@+id/editTelefoneContato"
@@ -58,26 +73,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="@string/txt_hint_edit_telefone_contato"
+        android:hint="@string/campo_nao_utilizado"
         android:inputType="phone"
         app:layout_constraintBottom_toTopOf="@+id/btnLimpar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editNomeDoCurso" />
-
-    <EditText
-        android:id="@+id/editPrimeiroNome"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="@string/txt_hint_edit_primeiro_nome"
-        android:inputType="text|textPersonName|textAutoComplete"
-        app:layout_constraintBottom_toTopOf="@+id/editSobrenome"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
     <Button
         android:id="@+id/btnLimpar"

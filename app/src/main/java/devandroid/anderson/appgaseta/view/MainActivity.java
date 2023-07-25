@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
         pessoa = new Pessoa();
         controller.buscar(pessoa);
 
-        editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
-        editSobrenome = findViewById(R.id.editSobrenome);
+        editPrimeiroNome = findViewById(R.id.editGa);
+        editSobrenome = findViewById(R.id.editEt);
         editNomeDoCurso = findViewById(R.id.editNomeDoCurso);
         editTelefoneContato = findViewById(R.id.editTelefoneContato);
         spinner = findViewById(R.id.spinner);
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         btnFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Volte sempre", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "GasEta Boa Economia, Volte sempre!", Toast.LENGTH_LONG).show();
                 finish();
             }
         });

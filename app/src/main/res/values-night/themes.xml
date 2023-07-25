@@ -1,6 +1,6 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
-    <style name="Base.Theme.AppListaCurso" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.AppGasEta." parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <item name="colorPrimary">@color/blue</item>
     </style>

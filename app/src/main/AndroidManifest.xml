@@ -10,13 +10,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppListaCurso"
+        android:theme="@style/Base.Theme.AppGasEta"
         tools:targetApi="31">
         <activity
             android:name=".view.MainActivity"
             android:exported="false" />
+        <activity android:name=".view.SplashActivity"
+            android:exported="false" />
         <activity
-            android:name=".view.SplashActivity"
+            android:name=".view.GasEtaActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
