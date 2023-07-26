@@ -13,15 +13,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import devandroid.anderson.appgaseta.R;
 import devandroid.anderson.appgaseta.apoio.UtilGasEta;
+import devandroid.anderson.appgaseta.controller.Combustivel;
 
 public class GasEtaActivity extends AppCompatActivity {
+
+    Combustivel combustivelGasolina;
+    Combustivel combustivelEtanol;
 
     private EditText editGasolina, editEtanol;
     private Button btnCalcular, btnLimpar, btnSalvar, btnFinalizar;
     private TextView txtResultado;
-
     double precoGasolina, precoEtanol;
-
     String recomendacao;
 
     @Override
@@ -72,7 +74,6 @@ public class GasEtaActivity extends AppCompatActivity {
                             "Por favor, digite os dados Obrigatórios...",
                             Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
 
@@ -81,7 +82,6 @@ public class GasEtaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 editGasolina.setText("");
                 editEtanol.setText("");
-
             }
         });
 
@@ -89,6 +89,21 @@ public class GasEtaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //TODO: Desabilitar o botão salvar.
+
+                combustivelGasolina = new Combustivel();
+                combustivelEtanol = new Combustivel();
+
+                combustivelGasolina.setNomeDoCombustivel("Gasolina");
+                combustivelGasolina.setPrecoDoCombustivel(precoGasolina);
+
+                combustivelEtanol.setNomeDoCombustivel("Etanol");
+                combustivelEtanol.setPrecoDoCombustivel(precoEtanol);
+
+                combustivelGasolina.setRecomendacao(UtilGasEta.calcularMelhorOpcao(precoGasolina, precoEtanol));
+                combustivelEtanol.setRecomendacao(UtilGasEta.calcularMelhorOpcao(precoGasolina,precoEtanol));
+
+                int parada = 0;
             }
         });
 
@@ -103,6 +118,5 @@ public class GasEtaActivity extends AppCompatActivity {
         Toast.makeText(GasEtaActivity.this,
                 UtilGasEta.calcularMelhorOpcao(5.12, 3.39),
                 Toast.LENGTH_SHORT).show();
-
     }
 }
