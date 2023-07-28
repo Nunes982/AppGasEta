@@ -42,7 +42,5 @@ public class SplashActivity extends AppCompatActivity {
 
             }
         }, TIME_OUT_SPLASH);
-
-
     }
 }
