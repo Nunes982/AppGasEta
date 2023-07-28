@@ -5,5 +5,5 @@
         <item name="colorPrimary">@color/blue</item>
     </style>
 
-    <style name="Base.Theme.AppGasEta." parent="Base.Theme.AppGasEta" />
+<!--    <style name="Base.Theme.AppGasEta." parent="Base.Theme.AppGasEta" />-->
 </resources>
