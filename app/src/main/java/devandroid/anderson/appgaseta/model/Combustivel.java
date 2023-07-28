@@ -1,4 +1,4 @@
-package devandroid.anderson.appgaseta.controller;
+package devandroid.anderson.appgaseta.model;
 
 public class Combustivel {
 
