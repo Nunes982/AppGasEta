@@ -31,6 +31,4 @@ public class CombustivelController {
         dadosPreferences.clear();
         dadosPreferences.apply();
     }
-
-
 }

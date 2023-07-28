@@ -52,30 +52,30 @@ public class GasEtaActivity extends AppCompatActivity {
 
                 boolean isDadosOk = true;
 
-                if (TextUtils.isEmpty(editGasolina.getText())){
+                if (TextUtils.isEmpty(editGasolina.getText())) {
                     editGasolina.setError("* Obrigatório");
                     editGasolina.requestFocus();
                     isDadosOk = false;
                 }
 
-                if (TextUtils.isEmpty(editEtanol.getText())){
+                if (TextUtils.isEmpty(editEtanol.getText())) {
                     editEtanol.setError("* Obrigatório");
                     editEtanol.requestFocus();
                     isDadosOk = false;
                 }
 
-                if (isDadosOk){
+                if (isDadosOk) {
 
                     precoGasolina = Double.parseDouble(editGasolina.getText().toString());
-                    precoEtanol =Double.parseDouble(editEtanol.getText().toString());
+                    precoEtanol = Double.parseDouble(editEtanol.getText().toString());
 
-                    recomendacao = UtilGasEta.calcularMelhorOpcao(precoGasolina,precoEtanol);
+                    recomendacao = UtilGasEta.calcularMelhorOpcao(precoGasolina, precoEtanol);
 
                     txtResultado.setText(recomendacao);
 
                     btnSalvar.setEnabled(true);
 
-                }else {
+                } else {
                     Toast.makeText(GasEtaActivity.this,
                             "Por favor, digite os dados Obrigatórios...",
                             Toast.LENGTH_SHORT).show();
@@ -109,7 +109,7 @@ public class GasEtaActivity extends AppCompatActivity {
                 combustivelEtanol.setPrecoDoCombustivel(precoEtanol);
 
                 combustivelGasolina.setRecomendacao(UtilGasEta.calcularMelhorOpcao(precoGasolina, precoEtanol));
-                combustivelEtanol.setRecomendacao(UtilGasEta.calcularMelhorOpcao(precoGasolina,precoEtanol));
+                combustivelEtanol.setRecomendacao(UtilGasEta.calcularMelhorOpcao(precoGasolina, precoEtanol));
 
                 controller.salvar(combustivelGasolina);
                 controller.salvar(combustivelEtanol);
