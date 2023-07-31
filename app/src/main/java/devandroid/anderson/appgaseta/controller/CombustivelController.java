@@ -3,6 +3,8 @@ package devandroid.anderson.appgaseta.controller;
 import android.content.ContentValues;
 import android.content.SharedPreferences;
 
+import java.util.List;
+
 import devandroid.anderson.appgaseta.database.GasEtaDB;
 import devandroid.anderson.appgaseta.model.Combustivel;
 import devandroid.anderson.appgaseta.view.GasEtaActivity;
@@ -36,6 +38,23 @@ public class CombustivelController extends GasEtaDB {
         dados.put("recomendacao", combustivel.getRecomendacao());
 
         salvarObjeto("Combustivel", dados);
+    }
+
+    public List<Combustivel> getListaDeDados() {
+        return listarDados();
+    }
+
+    public void alterar(Combustivel combustivel){
+
+        ContentValues dados = new ContentValues();
+
+        dados.put("id", combustivel.getId());
+        dados.put("nomeDoCombustivel", combustivel.getNomeDoCombustivel());
+        dados.put("precoDoCombustivel", combustivel.getPrecoDoCombustivel());
+        dados.put("recomendacao", combustivel.getRecomendacao());
+
+        alterarObjeto("Combustivel",dados);
+
     }
 
     public void limpar() {
